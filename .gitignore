@@ -17,6 +17,8 @@ env/
 # Database files (keep small test files only)
 *.db
 !sample*.db
+# Except integrated db tracked by LFS
+!gaokao_system/data/*.db
 
 # OS
 .DS_Store
@@ -32,4 +34,5 @@ Thumbs.db
 # Excel exports (too large)
 *.xlsx
 !gaokao_system/data/*.xlsx
+!在浙招生高校名单*.xlsx
 universities.db.baiduyun.uuring.cfg
