@@ -38,6 +38,7 @@ zhejiangzhiyuan/
 | school_indicators | 学校指标(预留) | 0 |
 | career_websites | 就业网站 | 286 |
 | integrated_schools | 整合高校信息 | 2,290 |
+| zhejiang_recruiting_schools | 在浙招生高校 | 1,717 |
 
 ## 快速开始
 
@@ -80,6 +81,13 @@ WHERE major LIKE '%计算机%';
 -- 查询有A+学科的高校
 SELECT school_name, eval_count FROM integrated_schools
 WHERE has_a_plus = 1;
+
+-- 查询在浙招生高校（在浙招生高校表）
+SELECT * FROM zhejiang_top_schools LIMIT 20;
+
+-- 查询某高校在浙招生年份
+SELECT school_name, first_year, latest_year FROM zhejiang_recruiting_schools
+WHERE school_name LIKE '%浙江大学%';
 ```
 
 ## 数据来源
@@ -105,6 +113,7 @@ WHERE has_a_plus = 1;
 | save_integrated_data.py | 保存整合数据到数据库 |
 | update_career_websites.py | 更新就业网站数据 |
 | discover_career_websites.py | 发现新的就业网站 |
+| build_zhejiang_schools.py | 构建在浙招生高校名单 |
 
 ## 未来扩展
 
