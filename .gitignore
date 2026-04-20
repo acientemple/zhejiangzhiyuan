@@ -31,4 +31,5 @@ Thumbs.db
 
 # Excel exports (too large)
 *.xlsx
-!中国高校名单.xlsx
+!gaokao_system/data/*.xlsx
+universities.db.baiduyun.uuring.cfg
