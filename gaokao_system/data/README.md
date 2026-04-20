@@ -214,6 +214,28 @@
 
 **视图：** `top_schools` - 数据完整度>=75的高质量高校视图
 
+### 11. zhejiang_recruiting_schools（在浙招生高校表）
+
+从历年录取数据中提取的在浙江招生的高校名单。
+
+| 字段 | 类型 | 说明 |
+|------|------|------|
+| id | INTEGER | 主键 |
+| school_name | TEXT | 学校名称（清理后） |
+| original_name | TEXT | 原始名称 |
+| school_code | TEXT | 学校代码 |
+| first_year | INTEGER | 首次招生年份 |
+| latest_year | INTEGER | 最近招生年份 |
+| batches | TEXT | 招生批次（一段/二段） |
+| total_records | INTEGER | 录取记录总数 |
+| is_985 | INTEGER | 是否985 |
+| is_211 | INTEGER | 是否211 |
+| is_double_first_class | INTEGER | 是否双一流 |
+
+**记录数：** 1,717 所
+
+**视图：** `zhejiang_top_schools` - 按层次和招生规模排序
+
 ## 数据来源
 
 | 数据项 | 来源文件 |
